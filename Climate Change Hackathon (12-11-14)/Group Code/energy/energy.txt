@@ -1,0 +1,143 @@
+// Description: Part of a mini game in the ENERGY catogary.
+// Pre-Condition: Scanner instantiated
+// Post-Condition: Return the points.
+
+import java.util.Scanner;
+
+public class Energy
+{
+    public static void main(String[] args)
+    {
+        int p;
+        Scanner keyboard;
+        keyboard = new Scanner(System.in);
+        
+        p=energy(keyboard);
+        
+        System.out.println("Thank you! Your total points are "+p+".");
+    }
+
+	public static int energy(Scanner input)
+	{
+		int point;
+		int a, b, c, d, e;
+		String temp;
+		
+		point=0;
+	
+		System.out.println("ENERGY CATEGORY\n(Please enter the number associated with your choice.)\n");
+		System.out.println("A. Do you have solar panels installed at home?");
+		System.out.println("\t1. Yes, I do have solar panel in my house.");
+		System.out.println("\t2. I am going to install some in my house.");
+		System.out.println("\t3. No, I do not have any solar panel in my house.");
+		System.out.println("Your choice: ");
+	
+		temp=input.nextLine();
+		a=Integer.parseInt(temp);
+	
+		if (a==1)
+		{
+			point+=5;
+		}
+		else if (a==2)
+		{
+			point+=3;
+		}
+		else if (a==3)
+		{
+			point+=1;
+		}
+		
+		System.out.println("B. Do you always turn off the lights when you leave a room?");
+		System.out.println("\t1. Yes, I always do.");
+		System.out.println("\t2. I will try to remember to do it.");
+		System.out.println("\t3. No, I do not really do it.");
+		System.out.println("Your choice: ");
+	
+		temp=input.nextLine();
+		b=Integer.parseInt(temp);
+	
+		if (b==1)
+		{
+			point+=5;
+		}
+		else if (b==2)
+		{
+			point+=3;
+		}
+		else if (b==3)
+		{
+			point+=1;
+		}
+		
+		System.out.println("C. Do you always unplug electronics when they are not in use?");
+		System.out.println("\t1. Yes, I always do.");
+		System.out.println("\t2. I will try to do it.");
+		System.out.println("\t3. No, I do not really do it.");
+		System.out.println("Your choice: ");
+	
+		temp=input.nextLine();
+		c=Integer.parseInt(temp);
+	
+		if (c==1)
+		{
+			point+=5;
+		}
+		else if (c==2)
+		{
+			point+=3;
+		}
+		else if (c==3)
+		{
+			point+=1;
+		}
+		
+		System.out.println("D. Do you always buy evergy-saving lightbulbs for your house?");
+		System.out.println("\t1. Yes, I always do.");
+		System.out.println("\t2. I will make the effort.");
+		System.out.println("\t3. No, I do not really do it.");
+		System.out.println("Your choice: ");
+	
+		temp=input.nextLine();
+		d=Integer.parseInt(temp);
+	
+		if (d==1)
+		{
+			point+=5;
+		}
+		else if (d==2)
+		{
+			point+=3;
+		}
+		else if (d==3)
+		{
+			point+=1;
+		}
+		
+		System.out.println("E. Do you regulate your thermostat?");
+		System.out.println("\t1. Yes, I always do.");
+		System.out.println("\t2. I will make the effort.");
+		System.out.println("\t3. No, I do not really do it.");
+		System.out.println("Your choice: ");
+	
+		temp=input.nextLine();
+		e=Integer.parseInt(temp);
+	
+		if (e==1)
+		{
+			point+=5;
+		}
+		else if (e==2)
+		{
+			point+=3;
+		}
+		else if (e==3)
+		{
+			point+=1;
+		}
+	
+		return point;
+	}
+	
+	
+}

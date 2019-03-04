@@ -1,0 +1,86 @@
+import java.util.Scanner;
+public class Recycling 
+{
+	public static void main (String[] args)
+	{
+		int p;
+		Scanner keyboard;
+		keyboard = new Scanner (System.in);
+		p = recycling (keyboard);
+		System.out.println ("Thank you youe score is " + p);	
+		
+	}
+	public static int recycling (Scanner keyboard)
+	{
+		//DECLARATION SECTION
+		int points;
+		int answer;
+		String temp;
+	
+		//INITIALIZATION SECTION
+		points=0;
+	
+		//PROCESSING
+		//QUESTION 1
+		System.out.println ("How often do you recycle/reuse paper?");
+		System.out.println ("Enter \"1\" for ALWAYS, \"2\" for SOMETIMES or \"3\" for NEVER");
+        temp = keyboard.nextLine ();
+        answer =Integer.parseInt(temp);
+        	
+	    if (answer== 1)
+		{
+		    points +=5; 
+		}
+		else if (answer==2)
+		{
+		  points +=3;  
+		}
+		else if (answer==3)
+		{
+		   points +=1;
+		}
+		//QUESTION 2
+		System.out.println("How ofter do you recycle/reuse plastic");
+		System.out.println ("Enter \"1\" for ALWAYS, \"2\" for SOMETIMES or \"3\" for NEVER");
+		temp = keyboard.nextLine ();
+        answer =Integer.parseInt(temp);
+			if (answer== 1)
+		{
+		    points +=5;
+		}
+		else if (answer==2)
+		{
+		  points +=3; 
+		}
+		else if (answer==3)
+		{
+		   points +=1;
+		}
+		//QUESTION 3
+		System.out.println ("How oftern do you recycle/reuse aluminium?");
+		System.out.println ("Enter \"1\" for ALWAYS, \"2\" for SOMETIMES or \"3\" for NEVER");
+		temp = keyboard.nextLine ();
+        answer =Integer.parseInt(temp);
+			
+		if (answer== 1)
+		{
+		    points +=5;
+		}
+		else if (answer==2)
+		{
+		  points +=3;  
+		}
+		else if (answer==3)
+		{
+		   points +=1;
+		}
+		
+		return points;	
+	}
+}
+
+/*
+ *System.out.println ("Did You Know? That making recycled paper instead of new paper uses 64 percent less energy and uses 58 percent less water);
+ *System.out.println ("Did You Know? About 80% of what Americans throw away is recyclable, yet our recycling rate is just 28%.");
+ *System.out.println ("Did You Know? That every Sunday, Americans waste 90 percent of recyclable newspapers. This wastes 500,000 trees");
+ *System.out.println ("Did You Know? That Recycling plastic saves twice as much energy as burning it in an incinerator."); */

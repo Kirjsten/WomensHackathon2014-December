@@ -1,0 +1,134 @@
+import java.util.Scanner;
+public class Transportation
+{
+public static int transportation()
+{
+	System.out.println("Environmental Effects of Transportation:"); 
+	System.out.println("According to the Environmental Protection Agency,");
+	System.out.println("more than half of the air pollution in the U.S.");
+	System.out.println("is caused by mobile vehicles, mainly cars.\n");
+	System.out.println("Cars emit greenhouse gasses, such as carbon dioxide,"); 
+	System.out.println("which contributes to global warming.\n");
+	System.out.println("Cars also emit nitrogen oxides and sulfur oxides,"); 
+	System.out.println("contributing significantly to acid rain, which"); 
+	System.out.println("changes the pH of waterways and soils and can harm"); 
+	System.out.println("the organisms that rely on these resources.\n");
+	
+	Scanner keyboard = new Scanner(System.in);
+	int points = 0;				   
+	int choice;
+	
+	System.out.println("How often do you drive to school/work?");
+	System.out.println("1. Always");
+	System.out.println("2. Sometimes"); 
+	System.out.println("3. Seldom");
+	System.out.println("4. Never");
+	System.out.println("Choice: ");
+	
+	choice = keyboard.nextInt();
+	
+	switch (choice)
+	{
+		case 1:
+			points += 0;
+			break;
+		case 2:
+			points += 1;
+			break;
+		case 3:
+			points += 3;
+			break;
+		case 4:
+		    points += 5;
+		    break;
+	}
+	
+	System.out.println("\nAccording to the American Automobile Association,"); 
+	System.out.println("the average cost of owning and operating a medium-sized car,"); 
+	System.out.println("traveling an average of 15,000 miles per year, is 55.2 cents per mile.\n");
+	System.out.println("For a 40-mile round-trip commute, this comes to $22.08 per day,"); 
+	System.out.println("$463.68 per month, and $5,564.16 per year, based on commuting 21 days per month.\n");
+
+	System.out.println("How often do you carpool?");
+	System.out.println("1. Always");
+	System.out.println("2. Sometimes"); 
+	System.out.println("3. Seldom");
+	System.out.println("4. Never");
+	System.out.println("Choice: ");
+					   
+	choice = keyboard.nextInt();
+	
+	switch (choice)
+	{
+		case 1:
+			points += 5;
+			break;
+		case 2:
+			points += 3;
+			break;
+		case 3:
+			points += 1;
+			break;
+		case 4:
+		    points += 0;
+		    break;
+	}
+	
+	System.out.println("\nHow often do you take public transportation?");
+	System.out.println("1. Always");
+	System.out.println("2. Sometimes"); 
+	System.out.println("3. Seldom");
+	System.out.println("4. Never");
+	System.out.println("Choice: ");
+	
+	choice = keyboard.nextInt();
+	
+	switch (choice)
+	{
+		case 1:
+			points += 5;
+			break;
+		case 2:
+			points += 3;
+			break;
+		case 3:
+			points += 1;
+			break;
+		case 4:
+		    points += 0;
+		    break;
+	}
+	
+	System.out.println("\nHow often do you opt to walk or ride a bicycle instead of drive?");
+	System.out.println("1. Always");
+	System.out.println("2. Sometimes"); 
+	System.out.println("3. Seldom");
+	System.out.println("4. Never");
+	System.out.println("Choice: ");
+	
+	choice = keyboard.nextInt();
+	
+	switch (choice)
+	{
+		case 1:
+			points += 5;
+			break;
+		case 2:
+			points += 3;
+			break;
+		case 3:
+			points += 1;
+			break;
+		case 4:
+		    points += 0;
+		    break;
+	}
+	
+	return points;
+}
+public static void main(String[] args)
+{
+	int total = transportation();
+	System.out.println(total);
+}
+}
